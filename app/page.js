@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { LuNotebookPen } from "react-icons/lu";
-import HeroImage from "../public/hero.png"; // Keep this path
+import HeroImage from "../public/images/hero.png"; // Keep this path
 import Image from "next/image";
 
 export default function Home() {
@@ -47,7 +47,8 @@ export default function Home() {
               <Image
                 src={HeroImage}
                 alt="An illustration of developers collaborating with green neon lights"
-                layout="fill"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 objectFit="cover"
                 className="w-full h-full border border-white/10"
               />
