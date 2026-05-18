@@ -24,7 +24,7 @@ function formatNoteMetaData(createdAtString, details) {
 
 export default async function NoteDetailsPage({ params }) {
   const { noteSlug } = await params;
-  const note = getNote(noteSlug);
+  const note = await getNote(noteSlug);
 
   if (!note) {
     notFound();

@@ -30,7 +30,12 @@ export default function NotePage() {
         <div className="px-8 py-4">
           <Suspense
             fallback={
-              <p className="text-center text-white/70">Loading Notes...</p>
+              <div className="flex flex-col items-center justify-center min-h-screen bg-black">
+                <div className="h-16 w-16 animate-spin rounded-full border-4 border-emerald-500/20 border-t-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.3)]"></div>
+                <p className="text-sm text-white pt-2 text-shadow-[0_0_15px_rgba(16,185,129,0.3)] ">
+                  Loading Notes...
+                </p>
+              </div>
             }
           >
             <Notes />
