@@ -4,6 +4,11 @@ import { FaPlus } from "react-icons/fa";
 import { getNotes } from "@/lib/db";
 import { Suspense } from "react";
 
+export const metadata = {
+  title: "All Notes",
+  description:
+    "DevNotes is a tiny note-sharing app for developers Create notes. Share knowledge. Inspire others.",
+};
 async function Notes() {
   const notes = await getNotes();
   return <NotesGrid notes={notes} />;

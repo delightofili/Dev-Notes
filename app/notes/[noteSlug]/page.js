@@ -22,6 +22,17 @@ function formatNoteMetaData(createdAtString, details) {
   return `${formattedDate} · ${readingTime} ${readingTime > 1 ? "mins" : "min"} read`;
 }
 
+export async function generateMetadata({ params }) {
+  const note = getNote(params.noteSlug);
+  if (!note) {
+    notFound();
+  }
+  return {
+    title: note.title,
+    discription: note.summary,
+  };
+}
+
 export default async function NoteDetailsPage({ params }) {
   const { noteSlug } = await params;
   const note = await getNote(noteSlug);

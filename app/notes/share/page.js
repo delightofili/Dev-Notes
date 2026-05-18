@@ -2,7 +2,9 @@
 import ImagePicker from "@/components/images/image-picker";
 import NotesFormSubmit from "@/components/notes/notes-form-submit";
 import { shareNote } from "@/lib/action";
+
 import Link from "next/link";
+
 import { useActionState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
